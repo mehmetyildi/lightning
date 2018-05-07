@@ -48,7 +48,6 @@
         <!--Logo-Header-->
         <div class="logoheader logo-top">
             <div class="logo">
-                Lorem
                 <a href="/"><img src="{{$hp->logo}}" style="width:160px; height: 90px;"  alt="image" /></a>
             </div>
         </div>
