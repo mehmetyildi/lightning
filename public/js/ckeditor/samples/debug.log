@@ -1,0 +1,4 @@
+[1128/112407.924:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files\settings.dat: Eriþim engellendi. (0x5)
+[1128/112407.928:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Boru sonlandý. (0x6D)
+[1128/112407.929:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files\settings.dat: Eriþim engellendi. (0x5)
+[1128/112407.965:ERROR:crashpad_client_win.cc(660)] crash server failed to launch, no dump captured
