@@ -141,6 +141,8 @@ Route::post('/activity/destroy/{activity}','ActivityController@delete');
 
 Route::get('/collection/index','CollectionsController@index');
 
+Route::get('/collection/likes/{user}','CollectionsController@likes');
+
 Route::get('/collection/pending/{user}/index','CollectionsController@index_user');
 
 Route::get('/collection/revise/{user}/index','CollectionsController@index_user_revise');

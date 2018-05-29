@@ -36,6 +36,12 @@ class CollectionsController extends Controller
         return view('admin.collection.index',compact('posts'));
     }
 
+    public function likes(User $user){
+
+        $posts=Collection::user_likes($user);
+        return view('user.collection.collection',compact('posts'));
+    }
+
     public function index_user(User $user)
     {
         //

@@ -118,6 +118,10 @@ class AppServiceProvider extends ServiceProvider
             
         });
 
+        view()->composer('user.collection.collection',function($view){
+            $view->with('posts',$this->paginate(Collection::user_likes(auth()->user()),5));
+        });
+
         
     }
 

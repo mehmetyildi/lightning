@@ -134,6 +134,7 @@
                                     <li><a class="nav-link ml-auto" href="{{ route('register') }}">Kaydol</a>
                                     </li>
                                     @else
+                                    <li><a class="nav-link ml-auto" href="/collection/likes/{{Auth::user()->id}}">BEĞENDİKLERİM</a></li>
 
                                     <li class="dropdown" >
                                         <a>{{ Auth::user()->name }}</a>

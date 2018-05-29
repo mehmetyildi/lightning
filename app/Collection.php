@@ -10,6 +10,8 @@ use App\Video;
 
 use App\Post;
 
+use App\User;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Collection extends Model
@@ -268,6 +270,26 @@ class Collection extends Model
 		return $posts+$books+$activities+$videos;
 	}
 
+	public static function user_likes(User $user){
+
+		$collection = collect();
+		$posts=$user->like_post()->get();
+		$books=$user->like_book()->get();
+		$videos=$user->like_video()->get();
+		$activities=$user->like_activity()->get();
+		foreach ($posts as $post)
+			$collection->push($post);
+
+		foreach ($activities as $activity)
+			$collection->push($activity);
+
+		foreach ($books as $book)
+			$collection->push($book);
+
+		foreach ($videos as $video)
+			$collection->push($video);
+		return $collection;
+	}
 
 
 
