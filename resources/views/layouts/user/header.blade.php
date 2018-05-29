@@ -133,9 +133,10 @@
                                     <li><a class="nav-link ml-auto" href="{{ route('login') }}">Giriş</a></li>
                                     <li><a class="nav-link ml-auto" href="{{ route('register') }}">Kaydol</a>
                                     </li>
-                                    @else
+                                    @else 
+                                    @if(App\Collection::user_likes(Auth::user())->count())
                                     <li><a class="nav-link ml-auto" href="/collection/likes/{{Auth::user()->id}}">BEĞENDİKLERİM</a></li>
-
+                                    @endif
                                     <li class="dropdown" >
                                         <a>{{ Auth::user()->name }}</a>
                                         <ul>
