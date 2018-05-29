@@ -1,6 +1,6 @@
        <section class="insta-full-gallery clearfix">
             <a href="{{$home->instagram}}"><h2 class="instahd"><span>Bizi Instagram'da Takip edin</span></h2></a>
-            <div class="slide-insta">
+          <!--   <div class="slide-insta">
                 <div class="insta-item">
                     <a href="{{$home->instagram}}"><img src="/creative_template/images/insta/1.jpg" alt="image" /><span>Travel</span></a>
                 </div>
@@ -28,13 +28,13 @@
                 <div class="insta-item">
                     <a href="{{$home->instagram}}"><img src="/creative_template/images/insta/9.jpg" alt="image" /><span>Travel</span></a>
                 </div>
-            </div>
+            </div> -->
         </section>
         <!--insta-full-gallery end  -->
 
         <!--footer  -->
         <footer>
-            <div class="footer-area">
+           <!--  <div class="footer-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="footer-area-bottom">
                 <div class="container">
                     <div class="row">
