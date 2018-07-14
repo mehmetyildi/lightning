@@ -24,6 +24,8 @@ use App\Booktype;
 
 use App\Videotype;
 
+use App\UserPost;
+
 use App\Http\Controllers\Controller;
 
 use App\CommentCollection;
@@ -89,6 +91,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->composer('layouts.admin.sidebar',function($view){
+            $view->with('user_post',UserPost::where('publish','0')->count());
             $view->with('collection',Collection::CountPending());
             $view->with('comments',CommentCollection::Count());
             $view->with('collection_user',Collection::CountPendingUser(auth()->user()));
@@ -120,6 +123,10 @@ class AppServiceProvider extends ServiceProvider
 
         view()->composer('user.collection.collection',function($view){
             $view->with('posts',$this->paginate(Collection::user_likes(auth()->user()),5));
+        });
+
+        view()->composer('admin.user_post.index',function($view){
+            $view->with('user_posts',UserPost::where('publish','0')->get());
         });
 
         

@@ -40,7 +40,8 @@
                   </ul>
                 </li>
                 @if(auth()->user()->hasRole('superadmin'))
-                <li><a href="/collection/index"><i class="fa fa-check-circle"></i>Onay bekleyenler&nbsp<span class="badge bg-green">{{$collection}}</span></a></li>
+                <li><a href="/collection/index"><i class="fa fa-check-circle"></i>Onay Bekleyen Makale&nbsp<span class="badge bg-green">{{$collection}}</span></a></li>
+                <li><a href="/user_post/unapproved"><i class="fa fa-check-circle"></i>Onay Bekleyen Yorum&nbsp<span class="badge bg-green">{{$user_post}}</span></a></li>
                 <li><a href="/comments/inapropriate/index"><i class="fa fa-times-circle"></i>Uygunsuz İçerik&nbsp<span class="badge bg-red">{{$comments}}</span></a></li>
                 <li><a href="/user/index"><i class="fa fa-user"></i> Kullanıcı İşlemleri</a></li>
 

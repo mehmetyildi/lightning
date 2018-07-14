@@ -81,9 +81,9 @@
 
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="/">ANASAYFA </a></li>
-                                    <li><a href="/about">HAKKIMIZDA</a></li>
-                                    <li class="dropdown"><a href="">BLOG</a>
+                                    <li><a href="/">Anasayfa </a></li>
+                                    <li><a href="/about">Hakkımızda</a></li>
+                                    <li class="dropdown"><a href="">Blog</a>
                                         <ul>
                                             @foreach($categories as $category)
                                             <li ><a href="/category/{{$category->url}}/posts/index">{{$category->title}}</a>
@@ -92,7 +92,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="">ETKİNLİK</a>
+                                    <li class="dropdown"><a href="">Etkinlik</a>
                                         <ul>
                                             @foreach($activitytypes as $activitytype)
                                             <li ><a href="/activity/{{$activitytype->url}}/index">{{$activitytype->type_name}}</a>
@@ -104,7 +104,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="">KÜTÜPHANE</a>
+                                    <li class="dropdown"><a href="">Kütüphane</a>
                                         <ul>
                                             @foreach($booktypes as $booktype)
                                             <li ><a href="/book/{{$booktype->url}}/index">{{$booktype->type_name}}</a>
@@ -116,7 +116,7 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="dropdown">  <a href="">VİDEO</a>
+                                    <li class="dropdown">  <a href="">Video</a>
                                         <ul>
                                             @foreach($categories_video as $category)
                                             <li ><a href="/category/{{$category->url}}/videos/index">{{$category->title}}</a>
@@ -128,14 +128,14 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    
+                                    <li><a class="nav-link ml-auto" href="/user_post/index">Sizden Gelenler</a></li>
                                     @guest
                                     <li><a class="nav-link ml-auto" href="{{ route('login') }}">Giriş</a></li>
                                     <li><a class="nav-link ml-auto" href="{{ route('register') }}">Kaydol</a>
                                     </li>
                                     @else 
                                     @if(App\Collection::user_likes(Auth::user())->count())
-                                    <li><a class="nav-link ml-auto" href="/collection/likes/{{Auth::user()->id}}">BEĞENDİKLERİM</a></li>
+                                    <li><a class="nav-link ml-auto" href="/collection/likes/{{Auth::user()->id}}">Beğenilerim</a></li>
                                     @endif
                                     <li class="dropdown" >
                                         <a>{{ Auth::user()->name }}</a>

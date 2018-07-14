@@ -246,3 +246,15 @@ Route::get('get/post/like/{post}','AjaxController@post_like');
 
 Route::get('get/post/dislike/{post}','AjaxController@post_dislike');
 
+
+Route::get('/user_post/index','UserPostController@index');
+
+Route::post('/user_post/create','UserPostController@store');
+
+Route::get('/user_post/unapproved','UserPostController@unapproved');
+
+Route::get('/user_post/show/{user_post}','UserPostController@show');
+
+Route::post('/user_post/confirm/{user_post}','UserPostController@confirm');
+
+Route::post('/user_post/destroy/{user_post}','UserPostController@destroy');

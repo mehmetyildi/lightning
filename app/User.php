@@ -16,6 +16,8 @@ use App\Book;
 
 use App\Activity;
 
+use App\UserPost;
+
 class User extends Authenticatable
 {
   use Notifiable;
@@ -256,5 +258,14 @@ class User extends Authenticatable
     return $this->belongsToMany('App\Activity','activity_like');
   }
 
+  public function user_posts(){
+    return $this->hasMany(UserPost::class);
+  }
+
+  public function create_post($user_post){
+     
+      $this->user_posts()->save($user_post); 
+      
+    }
 
 }
