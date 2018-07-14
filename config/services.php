@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => 'rehberlikatolyesi.com',
+        'secret' => '5027493bc7103797b2f509d70b3f978e-8b7bf2f1-f762fe31',
     ],
 
     'ses' => [
