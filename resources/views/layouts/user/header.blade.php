@@ -128,7 +128,8 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li><a class="nav-link ml-auto" href="/user_post/index">Sizden Gelenler</a></li>
+                                    <!-- Sizden gelenler eklenince aktif edilecek
+                                        <li><a class="nav-link ml-auto" href="/user_post/index">Sizden Gelenler</a></li> -->
                                     @guest
                                     <li><a class="nav-link ml-auto" href="{{ route('login') }}">Giriş</a></li>
                                     <li><a class="nav-link ml-auto" href="{{ route('register') }}">Kaydol</a>
